@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Krazy.Site" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Home.aspx">Welcome To Krazy Pizza</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="Home.aspx">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Order/Place_order.aspx">Order<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="Place_order.aspx">Place Order</a></li>
+          <li><a href="View_Order.aspx">View Order</a></li>
+        </ul>
+      </li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="Feedback/Order_Feed.aspx">Feedback<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="Order_Feed.aspx">Give Feedback</a></li>
+          <li><a href="View_Feed.aspx">View Feedback</a></li>
+        </ul>
+      </li>
+    </ul>
+  
+  </div>
+</nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
